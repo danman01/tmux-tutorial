@@ -1,0 +1,45 @@
+===============================================================================
+=    W e l c o m e   t o   t h e   T M U X   T u t o r   -   Version 1.7      =
+===============================================================================
+
+     Tmux is a very powerful console multiplexor that has many commands, too many to explain in a tutor such as this.  This tutor is designed to describe
+     enough of the commands that you will be able to easily use Tmux as
+     an all-purpose development environment.
+
+     The approximate time required to complete the tutor is 25-30 minutes,
+     depending upon how much time is spent with experimentation.
+
+     ATTENTION:
+     The commands in the lessons will modify the text.  Make a copy of this
+     file to practise on (if you started "tmuxtutor" this is already a copy).
+
+     It is important to remember that this tutor is set up to teach by
+     use.  That means that you need to execute the commands to learn them
+     properly.  If you only read the text, you will forget the commands!
+
+     Now, make sure that your Shift-Lock key is NOT depressed and press
+     the   j   key enough times to move the cursor so that Lesson 1.1
+     completely fills the screen.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Lesson 1.1:  Starting tmux
+
+
+     1. In a new terminal window, start a new tmux session with a session name: tmux new -s myname
+
+     2. see the session you just created by listing sessions: tmux ls
+
+     3. Once tmux has started, move to Lesson 1.2.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Lesson 1.2: Detach and Attach from a session
+
+    1. The prefix keystroke is used to execute many tmux commands. By default, Ctrl-b is your tmux prefix.
+
+    2. Type Prefix - d to detach from the current session
+
+    3. Type tmux ls to view all running sessions, and you should see your session you started in lesson 1.1
+
+    4. Type tmux at -t myname to attach to your named session
+
+    5. To kill a session, type tmux kill-session -t myname. You will not be able to reattach once the session is killed.
