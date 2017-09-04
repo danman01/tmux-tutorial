@@ -2,28 +2,32 @@
 =    W e l c o m e   t o   t h e   T M U X   T u t o r   -   Version 0.1      =
 ===============================================================================
 
-     Tmux is a very powerful console multiplexor that has many commands, too many to explain in a tutor such as this.  This tutor is designed to describe
-     enough of the commands that you will be able to easily use Tmux as
-     an all-purpose development environment.
+     Tmux is a very powerful console multiplexor that has many commands, too
+     many to explain in a tutor such as this.  This tutor is designed to
+     describe enough of the commands that you will be able to easily use Tmux
+     as an all-purpose development environment.
 
      The approximate time required to complete the tutor is 25-30 minutes,
      depending upon how much time is spent with experimentation.
 
-     ATTENTION:
-     The commands in the lessons will modify the text.  Make a copy of this
-     file to practise on (if you started "tmuxtutor" this is already a copy).
+     ATTENTION: The commands in the lessons will modify the text.  Make a copy
+     of this file to practise on (if you started "tmuxtutor" this is already a
+     copy).
 
-     It is important to remember that this tutor is set up to teach by
-     use.  That means that you need to execute the commands to learn them
-     properly.  If you only read the text, you will forget the commands!
+     It is important to remember that this tutor is set up to teach by use.
+     That means that you need to execute the commands to learn them properly.
+     If you only read the text, you will forget the commands!
 
-     Now, scroll through this file and try these commands out. If you're using vim for the first time to read this file, make sure that your Shift-Lock key is NOT depressed and press the   j   key enough times to move the cursor so that Lesson 1.1
-     completely fills the screen.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 1.1:  Starting tmux
+     Now, scroll through this file and try these commands out. If you're using
+     vim for the first time to read this file, make sure that your Shift-Lock
+     key is NOT depressed and press the   j   key enough times to move the
+     cursor so that Lesson 1.1 completely fills the screen.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Lesson 1.1:  Starting tmux
 
 
-     1. In a new terminal window, start a new tmux session with a session name: tmux new -s myname
+     1. In a new terminal window, start a new tmux session with a session name:
+     tmux new -s myname
 
      2. see the session you just created by listing sessions: tmux ls
 
@@ -33,15 +37,18 @@
 
     Lesson 1.2: Detach and Attach from a session
 
-    1. The prefix keystroke is used to execute many tmux commands. By default, Ctrl-b is your tmux prefix.
+    1. The prefix keystroke is used to execute many tmux commands. By default,
+    Ctrl-b is your tmux prefix.
 
     2. Type Prefix - d to detach from the current session
 
-    3. Type tmux ls to view all running sessions, and you should see your session you started in lesson 1.1
+    3. Type tmux ls to view all running sessions, and you should see your
+    session you started in lesson 1.1
 
     4. Type tmux at -t myname to attach to your named session
 
-    5. To kill a session, type tmux kill-session -t myname. You will not be able to reattach once the session is killed.
+    5. To kill a session, type tmux kill-session -t myname. You will not be
+    able to reattach once the session is killed.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -53,7 +60,8 @@
 
     3. Try switching between your two open windows
 
-    4. Sometimes you want to name a window to keep track of it. Prefix , will allow you to name a window. 
+    4. Sometimes you want to name a window to keep track of it. Prefix , will
+    allow you to name a window. 
 
     5. Some useful window commands to try out (append Prefix before each key):
       - c to create windows
@@ -67,9 +75,13 @@
 
     Lesson 1.4: Panes (splits)
 
-    1. Tmux really shines when you can switch windows (tabs) with ease, and have a dedicated tab for each responsibility of your development environment. To further up your organization and screen efficiency, you will need to have Panes (splits), which is one window split into 2 or more.
+    1. Tmux really shines when you can switch windows (tabs) with ease, and
+    have a dedicated tab for each responsibility of your development
+    environment. To further up your organization and screen efficiency, you
+    will need to have Panes (splits), which is one window split into 2 or more.
 
-    2. Practice these various commands to create splits (all prefaced with Prefix):
+    2. Practice these various commands to create splits (all prefaced with
+    Prefix):
     - %  vertical split
     - "  horizontal split
     - o  swap panes (cursor will jump to next pane)
@@ -80,46 +92,57 @@
     - ⍽  space - toggle between layouts
     - { (Move the current pane left)
     - } (Move the current pane right)
-    - z toggle pane zoom (pane takes up full window; <prefix> z to return to pane view
+    - z toggle pane zoom (pane takes up full window; <prefix> z to return to
+      pane view
 
-    3. Move between panes. Once you are able to do that, try moving between windows. These basic commands allow you to get started and be effetive with tmux! Pat yourself on the back for 10 minutes well spent.
+    3. Move between panes. Once you are able to do that, try moving between
+    windows. These basic commands allow you to get started and be effetive with
+    tmux! Pat yourself on the back for 10 minutes well spent.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Lesson 1.5: The tmux prompt
 
-    1. tmux has a prompt, similar to vim command mode, which you can access with <prefix> :
+    1. tmux has a prompt, similar to vim command mode, which you can access
+    with <prefix> :
 
-    2. From the prompt, you can issue various tmux commands that may read like <prefix> : some-command [some-value]. For example, to resize a pane, <prefix> : resize-pane -D (or -U, -L, -R)
+    2. From the prompt, you can issue various tmux commands that may read like
+    <prefix> : some-command [some-value]. For example, to resize a pane,
+    <prefix> : resize-pane -D (or -U, -L, -R)
 
-    3. Scrolling is interesting in tmux. To scroll, <prefix> esc, and you will see a little yellow square in the top right. now you can scroll up and down. ctrl-c to exit this scroll mode.
+    3. Scrolling is interesting in tmux. To scroll, <prefix> esc, and you will
+    see a little yellow square in the top right. now you can scroll up and
+    down. ctrl-c to exit this scroll mode.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Lesson 1.6: The tmux configuration file
 
-    1. Remapping the prefix keystroke may be desired. To do this, open your ~/.tmux.conf file, and add these lines:
+    1. Remapping the prefix keystroke may be desired. To do this, open your
+    ~/.tmux.conf file, and add these lines:
 
     # remap prefix to Control + a (map ctrl to caps lock in keyboard settings)
-    set -g prefix C-a
-    unbind C-b
-    bind C-a send-prefix
+    set -g prefix C-a unbind C-b bind C-a send-prefix
 
-    The above works very well if you have remapped your caps lock key to be ctrl (within your system preferences)
+    The above works very well if you have remapped your caps lock key to be
+    ctrl (within your system preferences)
 
     2. Reload the tmux config file from shell:
 
-        $ tmux source-file ~/.tmux.conf
-        Or from tmux command line:
+        $ tmux source-file ~/.tmux.conf Or from tmux command line:
 
         :source-file ~/.tmux.conf
 
-    3. View my example .tmux.conf [here](https://github.com/danman01/tmux-tutorial/blob/master/tmux.conf.example)
+    3. View my example .tmux.conf
+    [here](https://github.com/danman01/tmux-tutorial/blob/master/tmux.conf.example)
 
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-I hope you enjoyed this somewhat-interactive tutorial! It aspires to be like `vimtutor`. It was taken from one of the top tmux cheat sheet google results: https://gist.github.com/MohamedAlaa/2961058
+I hope you enjoyed this somewhat-interactive tutorial! It aspires to be like
+`vimtutor`. It was taken from one of the top tmux cheat sheet google results:
+https://gist.github.com/MohamedAlaa/2961058
 
-Another nice introductory article to tmux can be found here: https://robots.thoughtbot.com/a-tmux-crash-course
+Another nice introductory article to tmux can be found here:
+https://robots.thoughtbot.com/a-tmux-crash-course
